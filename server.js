@@ -8,6 +8,11 @@ const authRoutes = require('./routes/authRoutes');
 const protect = require('./middleware/authmiddle');
 const path = require('path');
 const express = require('express');
+const { Server } = require("socket.io")
+const {createServer} = require("http")
+const { game } = require("./routes/virtual_game")
+const { waiting_room } = require("./routes/waiting_room")
+
 
 const app = express ();  
 
@@ -56,6 +61,24 @@ app.get('/api/dados/protegidos', protect, (req, res) =>{
     });
 });
 
-app.listen(config.PORT, () =>{
+app.get("/waiting-room", protect, (req, res)=>{
+    res.render("waiting-room")
+})
+
+app.get("/game-multiplayer", protect, (req, res)=>{
+    res.render("game-multiplayer")
+})
+
+const httpServer = createServer(app)
+
+const io = new Server(httpServer) 
+
+game(io)
+
+waiting_room(io)
+
+httpServer.listen(config.PORT, () =>{
     console.log(config.SUCESSO_MSG(config.PORT));
 })
+
+

@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw; 
+}
+
+div.board{
+    height: 70vh;
+    width: 70vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+div.row{
+    flex: 1;
+    display: flex;
+}
+
+div.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+div.white{
+    background-color: azure;
+}
+
+div.piece{
+    width: 90%;
+    height: 90%;
+    border-radius: 100px;
+}
+
+div.red{
+    background-color: brown;
+}
+
+div.blue{
+    background-color: cadetblue;
+}
+
+div.next-sel{
+    background-color: gray;
+}   
+
+div.dama{
+    background-image: url(./img/crown.png); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.hidden{
+    display: none;
+}
+
+div.modal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+div.filter{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: .2;
+}
+
+div.display{
+    position: absolute;
+    padding: 5vh 5vw;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh; 
+}
+
+div.display p {
+    font-size: 26pt;
+    max-width: 25vw;
+    text-align: center;
+}
+
+div.buttons{
+    width: 25vw;
+    display: flex;
+    justify-content: space-evenly;  
+}
+
+div.buttons button{
+    width:10vw;
+    height: 5vh;
+    font-size: 20pt;
+}
+
+aside{
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    align-self: flex-start;
+    background-color: azure;
+    padding: 5vh 2vw;
+    padding-top: 15vh;
+
+}
+
+header{
+    z-index: 1;
+    position: absolute;
+}

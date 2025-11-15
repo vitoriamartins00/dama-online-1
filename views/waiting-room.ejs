@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dama.css">
+    <title>Waiting</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="dama-icon">
+            <img src="/img/icon-dama.avif" class="icone-dama">
+            <span class="titulo-proj">Dama-On</span>
+        </div>
+
+        <div class="menu">
+            <a href="/home.html">HOME</a>
+            <a href="documentacao">SOBRE O PROJETO</a>
+            <a href="desenvolvedores">DESENVOLVEDORES</a>
+            <a href="cadastro" class="form-cadastro">SIGN UP</a>
+            <a href="login" class="form-login">LOGIN</a>
+        </div>
+    </header>
+    <main class="loading">
+        <h1>Esperando por mais jogadores</h1>
+        <div class="animacao-loadin">
+
+        </div>
+    </main>
+    
+    <div class="footer">
+        <hr class="linha-footer">
+        <p></br>2025 feito por Nicolas Gaiovicz e Vitoria Martins.
+        </p>
+        <p>Brasil</p>
+    </div>
+
+
+     <script type="importmap">
+        {
+            "imports": {
+            "socket.io-client": "https://cdn.socket.io/4.8.1/socket.io.esm.min.js"
+            }
+        }
+    </script>
+    <script src="script_waiting_room.js" type="module"></script>
+</body>
+</html>

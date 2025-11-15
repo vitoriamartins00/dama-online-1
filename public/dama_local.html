@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/dama.css">
+        <link rel="stylesheet" href="game.css">
+        <title>Game</title>
+    </head>
+    <body>
+        <div id="modal" class="hidden">
+            <div class="filter"></div>
+            <div class="display">
+                <p>lorem50</p>
+                <div class="buttons">
+                    <button>sair</button>
+                    <button id="restart">reiniciar</button>
+                </div>
+            </div>
+        </div>
+        <header class="cabecalho">
+            <div class="dama-icon">
+                <img src="/img/icon-dama.avif" class="icone-dama">
+                <span class="titulo-proj">Dama-On</span>
+            </div>
+
+            <div class="menu">
+                <a href="/home.html">HOME</a>
+                <a href="documentacao">SOBRE O PROJETO</a>
+                <a href="desenvolvedores">DESENVOLVEDORES</a>
+                <a href="cadastro" class="form-cadastro">SIGN UP</a>
+                <a href="login" class="form-login">LOGIN</a>
+            </div>
+        </header>   
+        <main>
+            <aside>
+                <h1>Vermelho: <span id="points-red">0</span></h1>
+                <h1>Azul: <span id="points-blue">0</span></h1>
+            </aside>
+            <h1>Turno: <span id="turno"></span></h1>
+            <div class="board">
+                <div class="row">
+                    <div class="block white" id="0-0"></div>
+                    <div class="block" id="0-1"></div>
+                    <div class="block white" id="0-2"></div>
+                    <div class="block" id="0-3"></div>
+                    <div class="block white" id="0-4"></div>
+                    <div class="block" id="0-5"></div>
+                    <div class="block white" id="0-6"></div>
+                    <div class="block" id="0-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block" id="1-0"></div>
+                    <div class="block white" id="1-1"></div>
+                    <div class="block" id="1-2"></div>
+                    <div class="block white" id="1-3"></div>
+                    <div class="block" id="1-4"></div>
+                    <div class="block white" id="1-5"></div>
+                    <div class="block" id="1-6"></div>
+                    <div class="block white" id="1-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block white" id="2-0"></div>
+                    <div class="block" id="2-1"></div>
+                    <div class="block white" id="2-2"></div>
+                    <div class="block" id="2-3"></div>
+                    <div class="block white" id="2-4"></div>
+                    <div class="block" id="2-5"></div>
+                    <div class="block white" id="2-6"></div>
+                    <div class="block" id="2-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block" id="3-0"></div>
+                    <div class="block white" id="3-1"></div>
+                    <div class="block" id="3-2"></div>
+                    <div class="block white" id="3-3"></div>
+                    <div class="block" id="3-4"></div>
+                    <div class="block white" id="3-5"></div>
+                    <div class="block" id="3-6"></div>
+                    <div class="block white" id="3-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block white" id="4-0"></div>
+                    <div class="block" id="4-1"></div>
+                    <div class="block white" id="4-2"></div>
+                    <div class="block" id="4-3"></div>
+                    <div class="block white" id="4-4"></div>
+                    <div class="block" id="4-5"></div>
+                    <div class="block white" id="4-6"></div>
+                    <div class="block" id="4-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block" id="5-0"></div>
+                    <div class="block white" id="5-1"></div>
+                    <div class="block" id="5-2"></div>
+                    <div class="block white" id="5-3"></div>
+                    <div class="block" id="5-4"></div>
+                    <div class="block white" id="5-5"></div>
+                    <div class="block" id="5-6"></div>
+                    <div class="block white" id="5-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block white" id="6-0"></div>
+                    <div class="block" id="6-1"></div>
+                    <div class="block white" id="6-2"></div>
+                    <div class="block" id="6-3"></div>
+                    <div class="block white" id="6-4"></div>
+                    <div class="block" id="6-5"></div>
+                    <div class="block white" id="6-6"></div>
+                    <div class="block" id="6-7"></div>
+                </div>
+                <div class="row">
+                    <div class="block" id="7-0"></div>
+                    <div class="block white" id="7-1"></div>
+                    <div class="block" id="7-2"></div>
+                    <div class="block white" id="7-3"></div>
+                    <div class="block" id="7-4"></div>
+                    <div class="block white" id="7-5"></div>
+                    <div class="block" id="7-6"></div>
+                    <div class="block white" id="7-7"></div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="script_dama_local.js"></script>
+    </body>
+</html>

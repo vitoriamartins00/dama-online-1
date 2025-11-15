@@ -5,7 +5,7 @@
     <title>Login | Dama-On</title>
     <link rel="stylesheet" href="/dama.css">
 </head>
-<body>
+<body class="log">
     <header class="cabecalho">
         <div class="dama-icon">
             <img src="/img/icon-dama.avif" class="icone-dama">
@@ -21,22 +21,25 @@
         </div>
     </header>    
 
-    <div class="card-login">
-        <div class="painel-forms" style="position: relative;top: 55px">
-            <h4 style="margin-bottom: 30px;">LOGIN</h4>
-            <form id="loginForm" action="/api/auth/login" method="post">
-                <label for="email"></label>
-                <input type="text" id="email" name="email" placeholder="Email" required><br><br>
-                <label for="password"></label>
-                <input type="password" id="password" name="password" placeholder="Senha" required><br><br>
-                <input type="submit" value="Login" id="bt-login">
-            </form>
+    <main class="log">
+        <div class="card-login">
+            <div class="painel-forms" style="position: relative;top: 55px">
+                <h4 style="margin-bottom: 30px;">LOGIN</h4>
+                <form id="loginForm" action="/api/auth/login" method="post">
+                    <label for="email"></label>
+                    <input type="text" id="email" name="email" placeholder="Email" required><br><br>
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Senha" required><br><br>
+                    <input type="submit" value="Login" id="bt-login">
+                </form>
+            </div>
         </div>
-    </div>
 
-    <div class="img-right-login">
-        <img src="/img/img-dama.png" style="width: 750px; height: 420px">   
-    </div>
+        <div class="img-right-login">
+            <img src="/img/img-dama.png">   
+        </div>
+    </main>
+    
 
     <div class="footer">
         <hr class="linha-footer">

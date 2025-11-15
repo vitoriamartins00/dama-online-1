@@ -20,10 +20,13 @@ const schemaUsuario = new mongoose.Schema({
         type: String,
         require: [true, 'A senha é obrigatória'],
     },
-    // para verificar se o usuario está online
-    isOnline:{
-        type: Boolean,
-        default: false  //define o status inicial do usuario
+    partidas_jogadas:{
+        type: Number,
+        default: 0
+    },
+    paridas_vencidas:{
+        type: Number,
+        default: 0
     }
 });
 // será executado antes que o doc seja salvo no mongo
