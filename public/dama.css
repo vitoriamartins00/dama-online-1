@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100vh;
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    background-color: #ffff;
+    padding: 0;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,h2,h3{
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px 50px;
+}
+
+.dama-icon{
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#2c3e50;
+}
+
+.icone-dama{
+    height: 30px;
+    margin-right: 10px;
+}
+
+.menu {
+    margin-right: -50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    padding: 1vh 20vw;
+}
+
+.menu a{
+    margin-right: -3px;
+    text-decoration: none;
+    color:#2c3e50;
+    font-size: 0.85em;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+    font-style: normal;
+}
+
+.menu a:hover{
+    color: gray;
+}
+
+.meio-pagina{
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.intro h2{
+    font-size: 3.5em;
+    margin-top: 0;
+}
+
+.intro .title-secao{
+    font-size: 1.2em;
+    color: #666;
+}
+
+.dev-card{
+    margin-top: -2%;
+    max-width: 260px;
+    height: 260px;
+    width: 100%;
+    flex: 1 1 300px;        /* flex- para responsividade */
+    padding: 90px 50px 100px 50px;  /* espaço interno: cima, direita, baixo, esquerda */
+    margin-left: 10%;
+    background: #f4f4f4;
+    border-radius: 2px;
+    box-shadow: 
+        4px 0 10px -5px rgba(0, 0, 0, 0.2), /* sombra da direita: (offset-x, offset-y, blur-radius, spread-radius, cor) */
+        -4px 0 10px -5px rgba(0, 0, 0, 0.2); /* sombra da esquerda: (offset-x negativo, offset-y, blur-radius, spread-radius, cor) */
+    text-align: center;
+}
+
+.devs-grid{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.dev-foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;      /* garante que a img cubra a o círculo sem distorcer */
+    margin: -50px auto 30px;
+}
+
+.nome-dev{
+    margin-top: -3px;
+    margin-bottom: 3px;
+    font-size: 1.8em;
+    font-weight: 550;
+}
+
+.dev-info{
+    display: flex;
+    padding-top: 50px;       /* espaço entre o nome e as infos */
+    flex-direction: column;
+    gap: 15px;               /* espaço entre cada info */
+    font-size: 0.85em;
+    line-height: 1.5;       /* melhora a legibilidade */
+    font-weight: 500;
+}
+
+.dev-card2{
+    max-width: 260px;
+    height: 260px;
+    width: 100%;
+    flex: 1 1 300px;        /* flex- para responsividade */
+    padding: 90px 50px 100px 50px;  /* espaço interno: cima, direita, baixo, esquerda */
+    margin-left: 10%;
+    background: #f4f4f4;
+    border-radius: 2px;
+    box-shadow: 
+        4px 0 10px -5px rgba(0, 0, 0, 0.2), /* sombra da direita: (offset-x, offset-y, blur-radius, spread-radius, cor) */
+        -4px 0 10px -5px rgba(0, 0, 0, 0.2); /* sombra da esquerda: (offset-x negativo, offset-y, blur-radius, spread-radius, cor) */
+    text-align: center;
+    display: flex;
+    margin-top: 30%;
+    flex-direction: column;
+}
+
+.about-nic{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 45%;
+    margin-top: -37%;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+.about-vic{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 45%;
+    margin-top: -37%;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 2vh 0vw;
+    color: gray;
+    padding-top: 220px;
+    font-size: 0.85em;
+}
+
+.linha-footer {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 0;
+}
+
+.card-cadastro,.card-login{
+    padding: 60px 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    margin-left: -70%;
+    top: 2.5%;
+}
+
+.painel-forms{
+    flex: 0 0 50%;      /* ocupa 30% do espaço disponível */
+    transform: none;
+    padding: 30px 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10); 
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 450px;
+}
+
+.painel-forms form {
+    width: 50%; 
+    max-width: 300px; /* limita a largura real do formulário */
+    text-align: left;
+}
+
+.painel-forms input[type="text"], 
+.painel-forms input[type="email"], 
+.painel-forms input[type="password"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* inclui padding na largura total */
+}
+
+.painel-forms input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+}
+
+.img-right,.img-right-login{
+    margin-left: 35%;
+    margin-top: -35%;
+    flex: 1;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-right-login{
+    margin-top: -30%;
+}
+
+.intro, .tec {
+    margin-top: 20px;
+    background: white;
+    width: 100vh;
+    max-width: 40%;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.des{
+    margin-top: 20px;
+    background: white;
+    width: 100vh;
+    max-width: 40%;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.ref{
+    margin-top: 20px;
+    background: white;
+    width: 100vh;
+    max-width: 40%;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.ref h5{
+    margin-top: 12px;
+}
+

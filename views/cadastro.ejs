@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Dama-On</title>
+    <link rel="stylesheet" href="/dama.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="dama-icon">
+            <img src="/img/icon-dama.avif" class="icone-dama">
+            <span class="titulo-proj">Dama-On</span>
+        </div>
+
+        <div class="menu">
+            <a href="/home.html">HOME</a>
+            <a href="documentacao">SOBRE O PROJETO</a>
+            <a href="desenvolvedores">DESENVOLVEDORES</a>
+            <a href="cadastro" class="form-cadastro">SIGN UP</a>
+            <a href="login" class="form-login">LOGIN</a>
+        </div>
+    </header>
+    
+    <div class="card-cadastro">
+        <div class="painel-forms">
+            <h4>SIGN UP</h4>
+            <form id="formCadastro" action="/api/auth/cadastro" method="post">
+                <label for="username"></label><br>
+                <input type="text" id="username" name="nomeusuario" placeholder="Usuario" required><br>
+            
+                <label for="email"></label><br>
+                <input type="email" id="email" name="email" placeholder="E-mail" required><br>
+            
+                <label for="pwd"></label><br>
+                <input type="password" id="pwd" name="senha" placeholder="Senha" required><br><br>
+            
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+    <div class="img-right">
+        <img src="/img/img-dama.png" style="width: 750px; height: 420px">   
+    </div>
+
+    <div class="footer">
+        <hr class="linha-footer">
+        <p></br>2025 feito por Nicolas Gaiovicz e Vitoria Martins.
+        </p>
+        <p>Brasil</p>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
