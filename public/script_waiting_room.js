@@ -6,8 +6,8 @@ const manager = new Manager(oi_path);
 
 const player = manager.socket("/waiting");
 
-console.log(player)
+console.log(player);
 
-player.on("go-to-game", (s)=>{
-    window.location.href = "/game-multiplayer"
-})
+player.on("go-to-game", (s) => {
+  window.location.href = "/game-multiplayer";
+});

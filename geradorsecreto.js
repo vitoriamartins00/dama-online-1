@@ -1,7 +1,7 @@
-const crypto = require('crypto');
+const crypto = require("crypto");
 
-const generateSercret = () =>{
-    return crypto.randomBytes(12).toString('hex');
+const generateSercret = () => {
+  return crypto.randomBytes(12).toString("hex");
 };
 
 console.log(generateSercret());

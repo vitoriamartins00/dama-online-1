@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dama.css">
-    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="/game.css">
     <title>Game - Multiplayer</title>
 </head>
+
 <body>
     <div id="modal" class="hidden">
         <div class="filter"></div>
         <div class="display">
             <p>lorem50</p>
             <div class="buttons">
-                <a href="/jogo.html"><button>Menu</button></a>
+                <a href="/perfil"><button>Menu</button></a>
             </div>
         </div>
     </div>
-     <header class="cabecalho">
+    <header class="cabecalho">
         <div class="dama-icon">
             <img src="/img/icon-dama.avif" class="icone-dama">
             <span class="titulo-proj">Dama-On</span>
@@ -30,13 +32,13 @@
             <a href="cadastro" class="form-cadastro">SIGN UP</a>
             <a href="login" class="form-login">LOGIN</a>
         </div>
-    </header>   
+    </header>
 
     <main>
         <aside>
             <h1>Vermelho: <span id="points-red">0</span></h1>
             <h1>Azul: <span id="points-blue">0</span></h1>
-        </aside>    
+        </aside>
         <h1>
             Turno: <span id="turno"></span>
         </h1>
@@ -72,13 +74,13 @@
                 <div class="block" id="2-7"></div>
             </div>
             <div class="row">
-                <div class="block"id="3-0"></div>
+                <div class="block" id="3-0"></div>
                 <div class="block white" id="3-1"></div>
-                <div class="block"id="3-2"></div>
+                <div class="block" id="3-2"></div>
                 <div class="block white" id="3-3"></div>
-                <div class="block"id="3-4"></div>
+                <div class="block" id="3-4"></div>
                 <div class="block white" id="3-5"></div>
-                <div class="block"id="3-6"></div>
+                <div class="block" id="3-6"></div>
                 <div class="block white" id="3-7"></div>
             </div>
             <div class="row">
@@ -135,4 +137,5 @@
     </script>
     <script src="script_multiplayer.js" type="module"></script>
 </body>
+
 </html>

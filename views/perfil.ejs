@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento Perfil || Dama-On</title>
+    <link rel="stylesheet" href="/dama.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="dama-icon">
+            <img src="/img/icon-dama.avif" class="icone-dama">
+            <span class="titulo-proj">Dama-On</span>
+        </div>
+
+        <div class="menu">
+            <a href="/home.html">HOME</a>
+            <a href="documentacao">SOBRE O PROJETO</a>
+            <a href="desenvolvedores">DESENVOLVEDORES</a>
+            <a href="cadastro" class="form-cadastro">SIGN UP</a>
+            <a href="login" class="form-login">LOGIN</a>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <div>
+            <h2>Bem-vindo(a), <%=nomeusuario %>! </h2>
+        </div>
+
+        <section class="dashboard-partidas">
+            <h3>Partidas Jogadas: <strong><%= partidas_jogadas %></strong></h3>
+            <p>Vitórias: <strong><%= partidas_vencidas %></strong></p>
+            <p>Derrotas: <strong><%= partidas_derrotas %></strong></p>
+        </section>
+
+        <section class="secao-dash">
+            <h2>Começar a Jogar</h2>
+            <div class="op-jogo">
+                <a href="/waiting-room" class="btn-mult">Multiplayer (vs Jogador)</a>
+                <a href="/dama_local.html" class="btn-local">Jogar 2 jogadores (in loco)</a>
+            </div>
+        </section>
+
+        <section class="gerenc-perfil">
+            <h2>Gerenciamento de Conta</h2>
+            <div class="gerenc-perfil">
+                <h4>Atualizar nome de Usuário</h4>
+                <form id="formAtualizacao" action="/api/auth/atualizar-conta" method="post">
+                    <label for="novoUsuario">Novo nome: </label>
+                    <input type="text" id="novoUsuario" name="novoNomeusuario" placeholder="<%= nomeusuario %>"
+                        required>
+                    <input type="submit" value="Update">
+                </form>
+            </div>
+            <div class="gerenc-perfil">
+                <h4>Excluir Conta</h4>
+                <p>Aviso! Esta ação é irreversível e removerá permanentemente seu perfil.</p>
+                <button id="delete" class="btn-excluir">Delete</button>
+            </div>
+            <div>
+                <input type="submit" value="Logout" onclick="handleLogout()">
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <hr class="linha-footer">
+        <p></br>2025 feito por Nicolas Gaiovicz e Vitoria Martins.
+        </p>
+        <p>Brasil</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

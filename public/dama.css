@@ -42,13 +42,14 @@ h1,h2,h3{
 }
 
 .menu {
-    margin-right: -50px;
+    margin-right: 0px;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    align-items: center;
+    gap: 1.5rem;
     align-items: center;
     text-align: center;
-    padding: 1vh 20vw;
+    padding: 1rem 5%;
 }
 
 .menu a{
@@ -89,7 +90,6 @@ h1,h2,h3{
 }
 
 .dev-card{
-   
     max-width: 260px;
     height: 260px;
     width: 100%;
@@ -210,7 +210,7 @@ body.log{
 }
 
 .painel-forms{
-    flex: 0 0 50%;      /* ocupa 30% do espaço disponível */
+    flex: 0 0 50%;      /* ocupa 50% do espaço disponível */
     transform: none;
     padding: 30px 40px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10); 
@@ -243,40 +243,55 @@ body.log{
     padding: 10px;
 }
 
-
-
-.intro, .tec {
-    margin-top: 20px;
-    background: white;
-    width: 100vh;
-    max-width: 40%;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+.conteudo{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.des{
-    margin-top: 20px;
-    background: white;
-    width: 100vh;
-    max-width: 40%;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+.secao{
+    margin-bottom: 50px;
+    background-color: #ffff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.06);
 }
 
-.ref{
-    margin-top: 20px;
-    background: white;
-    width: 100vh;
-    max-width: 40%;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+.secao h2{
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #222;
 }
 
-.ref h5{
-    margin-top: 12px;
+.secao h3{
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    color: #444;
+}
+
+.secao p{
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+.lista-ref{
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.lista-ref li{
+    margin-bottom: 12px;
+}
+
+.lista-ref a {
+    color: #0776;
+    text-decoration: none;
+}
+
+.lista-ref a:hover {
+    text-decoration: underline;
 }
 
 main.loading{
@@ -299,4 +314,149 @@ div.animacao-loadin{
     border-radius: 100px;
     animation: loagin 2s ease-in-out infinite;
    
+}
+
+
+.meio-pagina .dashboard{
+    max-width: 900px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.dashboard{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    max-width: 900px;
+    width: 90%;
+    margin: 5vh auto;
+}
+
+.msg{
+    margin-bottom: 30px;
+}
+
+.secao-dash{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.secao-dash h2{
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #34495e;
+}
+
+.op-jogo{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.op-jogo a{
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 8px;
+    flex-grow: 1;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-mult{
+    background-color: gainsboro;
+    color: #34495e;
+}
+
+.btn-local{
+    background-color: gainsboro;
+    color: #34495e;
+}
+
+.op-jogo a:hover{
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.gerenc-perfil{
+    background-color: #ffff;
+    border: 1px solid #f0f0f0;
+    padding: 25px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.gerenc-perfil h2{
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    color: #34495e;
+}
+
+.gerenc-perfil h4 {
+    font-size: 1em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.gerenc-perfil form {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.gerenc-perfil input[type="text"] {
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 50%; 
+    min-width: 80px;
+}
+
+.gerenc-perfil input[type="submit"] {
+    background-color: #34495e; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0; /* impede que o botão encolha */
+}
+
+.gerenc-perfil .btn-excluir { 
+    background-color: #e74c3c; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block; /* ocupa a própria linha */
+    max-width: 250px;
+}
+
+.dashboard h3{
+    font-size: 1em;
+}
+
+.sobre-software{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    padding: 40px 20px ;
+    text-align: justify;
+    height: 100vh;
+    line-height: 1.6;
+    font-size: 1.1rem;
 }

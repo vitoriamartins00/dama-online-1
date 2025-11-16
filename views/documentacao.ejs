@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre o Projeto | Dama-On</title>
+    <title>Documentação | Dama-On</title>
     <link rel="stylesheet" href="/dama.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <div class="dama-icon">
@@ -21,77 +23,162 @@
             <a href="login" class="form-login">LOGIN</a>
         </div>
     </header>
-    <div class="intro">
-        <h4>INTRODUÇÃO</h4>
-        <p>
-            O Dama-On foi desenvolvido para trazer o clássico jogo de dama para o ambiente digital de um jeito simples, acessível e agradável de usar. 
-            A proposta é manter a essência do tabuleiro tradicional, mas com a praticidade de uma plataforma moderna e segura.
-            Esta documentação apresenta uma visão clara sobre como o projeto funciona, incluindo sua estrutura, organização e principais decisões de desenvolvimento.
-        </p>
-    </div>
 
-    <div class="des">
-        <h4>DESENVOLVIMENTO</h4>
-        <p>
-            O Dama-On foi construído com uma arquitetura modular inspirada no modelo MVC, garantindo um código organizado e fácil de evoluir. 
-            O projeto é dividido em partes responsáveis pelo servidor, rotas de autenticação, modelo de usuário e interface.
-            A estrutura usa Node.js no backend, MongoDB para armazenamento e EJS com CSS/JS no frontend, criando um fluxo simples e direto entre lógica, dados e interface.
-        </p>
-    </div>
+    <main class="conteudo">
 
-    <div class="ref">
-        <h4>REFERÊNCIAS</h4>
+        <section class="secao">
+            <h2>Introdução</h2>
+            <p>
+                O Dama-On foi criado para levar o tradicional jogo de dama para o ambiente digital de forma simples e
+                intuitiva.
+                A ideia é preservar a experiência do tabuleiro clássico, mas com os benefícios de uma plataforma
+                moderna, prática e acessível.
+                O projeto busca oferecer uma interface agradável, fácil de usar e capaz de aproximar o jogador do que
+                ele já conhece no jogo físico, mas com recursos que tornam a experiência mais fluida e segura no meio
+                digital.
+            </p>
+        </section>
 
-        <h5 clas="I">I. Documentação Oficial</h5>
-        <ul>
-            <li>
-                W3SCHOOLS. <em>HTML, CSS and JavaScript Tutorials.</em> 
-                Disponível em: 
-                <a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a>. 
-                Acesso em: 14 nov. 2025.
-            </li>
+        <section class="secao">
+            <h2>Desenvolvimento</h2>
+            <p>
+                <p>
+                    O desenvolvimento do Dama-On foi pensado para ser organizado, fácil de entender e simples de manter,
+                    mesmo para quem está dando os primeiros passos no mundo da programação.
+                    Por isso, o projeto segue um modelo que separa cada parte do sistema conforme sua função — algo
+                    parecido com o padrão MVC, mas em uma versão mais simples e adaptada ao nosso contexto acadêmico.
+                    Essa divisão ajuda a entender como cada arquivo contribui para o funcionamento da plataforma e como
+                    todos se conectam entre si para entregar a experiência final ao usuário.
+                </p>
 
-            <li>
-                NPM. <em>Documentação Oficial do NPM.</em> 
-                Disponível em: 
-                <a href="https://docs.npmjs.com/" target="_blank">https://docs.npmjs.com/</a>. 
-                Acesso em: 14 nov. 2025.
-            </li>
+                <p>
+                    Tudo começa pelo servidor, que é quem “liga” o projeto. Ele fica no arquivo server.js e funciona
+                    como um coordenador geral.
+                    É nele que as configurações iniciais são feitas, como ativar o Express (que permite a criação de
+                    páginas e rotas), carregar o mecanismo de visualização (EJS) e estabelecer a conexão com o banco de
+                    dados.
+                    Para essa conexão acontecer, existe um arquivo separado chamado db.js, que fica dentro da pasta
+                    config. Ele é responsável por se comunicar com o MongoDB e garantir que o sistema consiga salvar e
+                    buscar informações sem erros.
+                    Como o acesso ao banco depende de dados sensíveis, como a URL secreta do MongoDB, essas informações
+                    ficam guardadas no arquivo .env, garantindo segurança e evitando que fiquem expostas no código.
+                </p>
 
-            <li>
-                EXPRESS.JS. <em>Documentação Oficial do Express.</em> 
-                Disponível em: 
-                <a href="https://expressjs.com/" target="_blank">https://expressjs.com/</a>. 
-                Acesso em: 14 nov. 2025.
-            </li>
+                <p>
+                    Depois das configurações, entram as rotas, que são como caminhos que o usuário percorre dentro do
+                    sistema. Elas ficam reunidas na pasta routes.
+                    A principal delas é authRoutes.js, onde estão as rotas de cadastro, login e logout. As rotas
+                    funcionam como “receptores”: quando o usuário faz uma ação — como enviar o formulário de login — a
+                    rota recebe essa solicitação e decide o que deve acontecer em seguida.
+                    Para garantir que apenas usuários autorizados acessem certas páginas, existe também um middleware
+                    (um verificador) chamado authMiddleware.js. Ele funciona como um porteiro, impedindo a entrada em
+                    áreas restritas caso o usuário não esteja autenticado.
+                </p>
 
-            <li>
-                MONGODB. <em>Documentação Oficial do MongoDB.</em> 
-                Disponível em: 
-                <a href="https://www.mongodb.com/docs/" target="_blank">https://www.mongodb.com/docs/</a>. 
-                Acesso em: 14 nov. 2025.
-            </li>
-        </ul>
-        
-        <div>
-        <h5 class="II">II. Tutoriais Utilizados</h5>
-        <ul>
-            <li>
-                YOUTUBE. <em>Criação de um Sistema Web com Node.js — Playlist.</em> 
-                Disponível em: 
-                <a href="https://youtube.com/playlist?list=PLRPMNR4C_PbyNRCaJkVX-3PAhhp4bd8ou" target="_blank">
-                    https://youtube.com/playlist?list=PLRPMNR4C_PbyNRCaJkVX-3PAhhp4bd8ou
-                </a>. 
-                Acesso em: 14 nov. 2025.
-            </li>
-        </ul>
-    </div>
-    </div>
+                <p>
+                    Para que o sistema saiba como armazenar as informações, existe a pasta models, onde ficam os modelos
+                    de dados. No caso do Dama-On, o principal é o user.js, que define como um usuário será registrado no
+                    banco:
+                    quais dados ele precisa ter, como a senha será tratada e como essas informações serão salvas. Esse
+                    modelo é utilizado pelas rotas para criar um novo usuário, validar um login ou consultar informações
+                    no banco de dados.
+                </p>
+
+                <p>
+                    A parte visual também tem um papel essencial, e ela está organizada dentro das pastas views e
+                    public. Na pasta views ficam os arquivos .ejs, que são páginas HTML que conseguem exibir informações
+                    dinâmicas.
+                    Isso significa que, dependendo do usuário que estiver acessando, certos textos, dados ou mensagens
+                    podem mudar automaticamente. Já a pasta public concentra tudo o que é estático — como o arquivo CSS
+                    responsável pelo layout,
+                    o JavaScript que adiciona interatividade e as imagens usadas no site. Esses arquivos são carregados
+                    diretamente no navegador do usuário e ajudam a compor a experiência visual e funcional da
+                    plataforma.
+                </p>
+
+                <p>
+                    No conjunto, todas essas partes trabalham em harmonia. O servidor recebe o pedido, consulta as
+                    rotas, que acionam os modelos, que conversam com o banco de dados, e ao final a interface é montada
+                    e enviada ao usuário através das views.
+                    Esse fluxo bem-organizado permite que o Dama-On funcione de maneira clara, lógica e fluida, mesmo
+                    sendo um projeto acadêmico. A arquitetura foi construída para ser ao mesmo tempo didática e
+                    funcional, oferecendo uma base sólida para evolução futura,
+                    seja para expandir recursos, melhorar a lógica do jogo ou aprimorar a experiência do usuário.
+                </p>
+            </p>
+        </section>
+
+        <section class="secao">
+            <h2>Referências</h2>
+
+            <h3>I. Documentação Oficial</h3>
+            <ul class="lista-ref">
+                <li>
+                    W3SCHOOLS. <em>HTML, CSS and JavaScript Tutorials.</em>
+                    Disponível em:
+                    <a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a>.
+                    Acesso em: 14 nov. 2025.
+                </li>
+
+                <li>
+                    NPM. <em>Documentação Oficial do NPM.</em>
+                    Disponível em:
+                    <a href="https://docs.npmjs.com/" target="_blank">https://docs.npmjs.com/</a>.
+                    Acesso em: 14 nov. 2025.
+                </li>
+
+                <li>
+                    EXPRESS.JS. <em>Documentação Oficial do Express.</em>
+                    Disponível em:
+                    <a href="https://expressjs.com/" target="_blank">https://expressjs.com/</a>.
+                    Acesso em: 14 nov. 2025.
+                </li>
+
+                <li>
+                    MONGODB. <em>Documentação Oficial do MongoDB.</em>
+                    Disponível em:
+                    <a href="https://www.mongodb.com/docs/" target="_blank">https://www.mongodb.com/docs/</a>.
+                    Acesso em: 14 nov. 2025.
+                </li>
+
+                <li>
+                    SOCKET.IO. <em>Documentação Oficial do Socket.io</em>
+                    Disponível em:
+                    <a href="https://socket.io/docs/v4/" target="_blank">https://socket.io/docs/v4/</a>.
+                    Acessado em: 15 nov. 2025.
+                </li>
+
+                <li>
+                    MONGOOSE. <em>Documentação Oficial do Mongoose</em>
+                    Disponível em:
+                    <a href="https://mongoosejs.com/docs/guide.html"
+                        target="_blank">https://mongoosejs.com/docs/guide.html</a>.
+                    Acessado em: 15 nov. 2025.
+                </li>
+            </ul>
+
+            <h3>II. Tutoriais Utilizados</h3>
+            <ul class="lista-ref">
+                <li>
+                    YOUTUBE. <em>Criação de um Sistema Web com Node.js — Playlist.</em>
+                    Disponível em:
+                    <a href="https://youtube.com/playlist?list=PLRPMNR4C_PbyNRCaJkVX-3PAhhp4bd8ou" target="_blank">
+                        Link da Playlist
+                    </a>.
+                    Acesso em: 14 nov. 2025.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
     <div class="footer">
         <hr class="linha-footer">
         <p></br>2025 feito por Nicolas Gaiovicz e Vitoria Martins.
         </p>
         <p>Brasil</p>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
